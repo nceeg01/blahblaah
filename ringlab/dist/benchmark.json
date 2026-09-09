@@ -1,0 +1,1 @@
+{"messages":1000000,"rounds":5,"capacity":1024,"spsc_per_second":6.97075e+07,"mutex_per_second":4.41913e+06,"ratio":15.774,"hardware_threads":9,"compiler":"13.3.0","environment":"Shared Linux build container; unpinned threads"}
