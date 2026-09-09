@@ -1,0 +1,4 @@
+__pycache__/
+*.sqlite
+mediaflow-output/
+*.tar.gz
