@@ -1,29 +1,858 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Yubraj Chaulagain — software and product engineer building reliable, evidence-grounded AI products.">
-  <meta property="og:title" content="Yubraj Chaulagain — Software & Product Engineer">
-  <meta property="og:description" content="Selected work in AI systems, data engineering, and product development.">
-  <title>Yubraj Chaulagain — Software & Product Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yubraj Chaulagain — Software Engineer</title>
+  <meta name="description" content="Portfolio of Yubraj Chaulagain — Software Engineer, AI & RAG Systems, Cloud & DevOps. University of North Texas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{font-family:Georgia,"Times New Roman",serif;color:#141814;background:#fff;--green:#075d3b;--muted:#5f6962;--line:#dfe4e0;--soft:#f4f7f5;--sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 30px}header{height:68px;border-bottom:1px solid var(--line)}header .wrap{height:100%;display:flex;align-items:center}header strong{font-size:18px}nav{margin-left:auto;display:flex;gap:30px;font-family:var(--sans);font-size:13px}nav a{text-decoration:none}.hero{display:grid;grid-template-columns:1.6fr .65fr;gap:70px;padding-top:72px;padding-bottom:72px}.label{font:600 10px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}h1{font-size:clamp(50px,7vw,86px);line-height:1;margin:18px 0 22px;letter-spacing:-.045em}h2{font-size:clamp(36px,4vw,56px);line-height:1.05;margin:13px 0 34px;letter-spacing:-.035em}.lead{font-size:clamp(22px,2.4vw,34px);line-height:1.25;max-width:760px;margin:0 0 20px}.intro{font:16px/1.7 var(--sans);color:var(--muted);max-width:700px}.actions{display:flex;gap:12px;margin-top:34px}.button{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border:1px solid var(--green);font:600 13px/1 var(--sans);text-decoration:none}.primary{background:var(--green);color:#fff}.facts{border-left:1px solid var(--line);padding-left:38px;align-self:center}.facts div+div{margin-top:30px}.facts p{font-size:15px;line-height:1.5;margin:9px 0;color:#343c36}.band{background:var(--soft);border-block:1px solid var(--line);padding:48px 0}.section{padding-block:72px}.section-head{display:flex;align-items:end;justify-content:space-between}.section-head a{font:600 12px var(--sans);color:var(--green)}.projects{display:grid;grid-template-columns:repeat(3,1fr)}.project{padding:2px 28px 0}.project:first-child{padding-left:0}.project+.project{border-left:1px solid var(--line)}.project h3{font-size:23px;margin:0 0 13px}.project p{font:14px/1.65 var(--sans);color:var(--muted);min-height:115px}.tags{border-top:1px solid var(--line);padding-top:14px;font:11px var(--sans);color:#4f5b53}.links{display:flex;gap:20px;margin-top:18px}.links a{font:600 12px var(--sans);color:var(--green)}.timeline{border-left:1px solid var(--line);margin-left:18px}.role{position:relative;display:grid;grid-template-columns:1fr auto;gap:30px;padding:0 0 45px 48px}.role:before{content:"";position:absolute;left:-6px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--green)}.role h3{font-size:21px;margin:0 0 5px}.role p,.role li{font:13px/1.6 var(--sans);color:var(--muted)}.role time{font:13px/1.5 var(--sans);color:#3f4a43;text-align:right}.education{display:grid;grid-template-columns:220px 1fr 1fr;gap:35px;align-items:start}.education article{border-left:1px solid var(--line);padding-left:30px}.education h3{font-size:18px;margin:0 0 7px}.education p{font:13px/1.6 var(--sans);color:var(--muted)}.toolkit{display:grid;grid-template-columns:220px repeat(3,1fr);gap:35px;border-top:1px solid var(--line);padding-top:40px}.toolkit h3{font-size:15px;margin:0 0 10px}.toolkit p{font:13px/1.7 var(--sans);color:var(--muted)}.contact{display:grid;grid-template-columns:220px 1fr;gap:35px;border-top:1px solid var(--line);padding-top:42px}.contact-links{display:flex;gap:26px;flex-wrap:wrap;font:600 13px var(--sans);color:var(--green)}footer{border-top:1px solid var(--line);padding:20px 0;font:11px var(--sans);color:var(--muted)}@media(max-width:800px){.wrap{padding-inline:20px}nav{display:none}.hero{grid-template-columns:1fr;gap:35px;padding-block:52px}.facts{border-left:0;border-top:1px solid var(--line);padding:28px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:20px}.facts div+div{margin:0}.projects{grid-template-columns:1fr}.project,.project:first-child{padding:28px 0}.project+.project{border-left:0;border-top:1px solid var(--line)}.project p{min-height:0}.role{grid-template-columns:1fr}.role time{text-align:left}.education,.toolkit,.contact{grid-template-columns:1fr}.education article{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}}
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0a0a0a;
+      --bg-elevated: #111111;
+      --bg-card: #161616;
+      --bg-card-hover: #1a1a1a;
+      --border: #222222;
+      --border-hover: #333333;
+      --text-primary: #ededed;
+      --text-secondary: #888888;
+      --text-tertiary: #555555;
+      --accent: #a78bfa;
+      --accent-dim: rgba(167, 139, 250, 0.1);
+      --accent-glow: rgba(167, 139, 250, 0.06);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --max-width: 1080px;
+      --radius: 12px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 24px;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .nav-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav-mobile-toggle svg { width: 20px; height: 20px; }
+
+    /* Sections */
+    section { padding: 120px 24px; }
+    .container { max-width: var(--max-width); margin: 0 auto; }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 48px;
+      color: var(--text-primary);
+    }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 60px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content { position: relative; }
+
+    .hero-greeting {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .hero-name {
+      font-size: clamp(48px, 8vw, 80px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-tagline {
+      font-size: clamp(18px, 2.5vw, 22px);
+      font-weight: 300;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .hero-links { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: var(--font);
+      border-radius: 8px;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--text-primary);
+      color: var(--bg);
+      border: 1px solid var(--text-primary);
+    }
+
+    .btn-primary:hover { background: #ffffff; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      color: var(--text-primary);
+      border-color: var(--border-hover);
+      background: var(--bg-elevated);
+    }
+
+    .btn svg { width: 16px; height: 16px; }
+
+    /* About */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .about-details { display: flex; flex-direction: column; gap: 24px; }
+
+    .about-detail-item {
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .about-detail-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 8px;
+    }
+
+    .about-detail-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    /* Experience */
+    .experience-list { display: flex; flex-direction: column; gap: 24px; }
+
+    .experience-item {
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color var(--transition);
+    }
+
+    .experience-item:hover { border-color: var(--border-hover); }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 16px;
+    }
+
+    .experience-company {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .experience-role {
+      font-size: 14px;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .experience-location {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+    }
+
+    .experience-date {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .experience-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .experience-bullets li {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .experience-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10px;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* Projects */
+    .projects-grid { display: flex; flex-direction: column; gap: 24px; }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .project-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .project-index {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 12px;
+    }
+
+    .project-name {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .project-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      max-width: 640px;
+    }
+
+    .project-tech { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .tech-tag {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-radius: 100px;
+    }
+
+    .project-arrow {
+      display: flex;
+      align-items: flex-start;
+      padding-top: 4px;
+      color: var(--text-tertiary);
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    .project-card:hover .project-arrow {
+      color: var(--text-primary);
+      transform: translate(4px, -4px);
+    }
+
+    .project-arrow svg { width: 20px; height: 20px; }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-group {
+      padding: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .skill-group-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 16px;
+    }
+
+    .skill-items { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .skill-item {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: all var(--transition);
+    }
+
+    .skill-item:hover {
+      color: var(--text-primary);
+      border-color: var(--border-hover);
+    }
+
+    /* Contact */
+    .contact { text-align: center; padding-bottom: 160px; }
+
+    .contact-heading {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .contact-sub {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    /* Footer */
+    footer {
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-text { font-size: 13px; color: var(--text-tertiary); }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      section { padding: 80px 20px; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px; left: 0; right: 0;
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+        gap: 16px;
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-mobile-toggle { display: block; }
+      .about-content { grid-template-columns: 1fr; gap: 32px; }
+
+      .project-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+
+      .project-arrow { display: none; }
+      .hero-links { flex-direction: column; align-items: flex-start; }
+      .contact { padding-bottom: 100px; }
+
+      .experience-header {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .experience-date {
+        padding-top: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <header><div class="wrap"><strong>Yubraj Chaulagain</strong><nav><a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
-  <main>
-    <section class="wrap hero" id="about"><div><p class="label">Software &amp; product engineer</p><h1>Yubraj Chaulagain</h1><p class="lead">I build reliable software and evidence-grounded AI products.</p><p class="intro">Computer science student and engineer focused on practical systems across AI, data engineering, cloud deployment, and product development.</p><div class="actions"><a class="button primary" href="#work">View selected work →</a><a class="button" href="https://github.com/nceeg01">GitHub ↗</a></div></div><aside class="facts"><div><span class="label">Currently</span><p>Computer Science at UNT<br>Expected December 2026</p></div><div><span class="label">Interests</span><p>AI systems<br>Data engineering<br>Product development<br>Reliable software</p></div></aside></section>
-    <section class="band" id="work"><div class="wrap"><div class="section-head"><div><span class="label">Featured work</span><h2>Selected projects</h2></div><a href="https://github.com/nceeg01">More on GitHub →</a></div><div class="projects">
-      <article class="project"><h3>CrestMind AI</h3><p>Property-document intelligence workspace with synthetic ingestion, property-isolated retrieval, evidence citations, durable local storage, and an explicit no-evidence response.</p><div class="tags">React · FastAPI · SQLite · Docker · OCR adapter</div><div class="links"><a href="https://yubraj-crestmind-demo-a21gojhnj-nikhilceeg03-6426s-projects.vercel.app">Live demo ↗</a><a href="https://github.com/nceeg01/Crest-Mind-AI">Source ↗</a></div></article>
-      <article class="project"><h3>Customer Service RAG Agent</h3><p>Clearly labeled voice-scheduling simulator with synthetic customers, grounded context, call events, time-zone-aware availability, persistent bookings, and conflict handling.</p><div class="tags">React · JavaScript · n8n export · Local persistence</div><div class="links"><a href="https://yubraj-voice-demo-jkfuyywlm-nikhilceeg03-6426s-projects.vercel.app">Live demo ↗</a><a href="https://github.com/nceeg01/test/tree/main/resume-mvps/apps/voice-agent">Source ↗</a></div></article>
-      <article class="project"><h3>Media ETL Pipeline</h3><p>Independent synthetic demonstration with 500 generated records, normalization, deterministic duplicates, quarantine reasons, count reconciliation, lineage, and cleaned CSV export.</p><div class="tags">React · JavaScript · Python · Data quality</div><div class="links"><a href="https://yubraj-media-etl-demo-c7tzxdky1-nikhilceeg03-6426s-projects.vercel.app">Live demo ↗</a><a href="https://github.com/nceeg01/test/tree/main/resume-mvps/apps/media-etl">Source ↗</a></div></article>
-    </div></div></section>
-    <section class="wrap section" id="experience"><span class="label">From supplied resume</span><h2>Work experience</h2><div class="timeline"><article class="role"><div><h3>Deployment Engineer · Woodcrest Capital</h3><p>Product engineering work spanning document intelligence, RAG systems, voice scheduling, Docker, and GCP deployment.</p></div><time>January 2026 – Present</time></article><article class="role"><div><h3>Data Engineering Intern · Kosis Multimedia</h3><p>Media workflow data pipelines, schema normalization, and Python data-cleaning modules.</p></div><time>2024 – 2025</time></article></div></section>
-    <section class="band"><div class="wrap education"><div><span class="label">Education</span><h2>Learning</h2></div><article><h3>University of North Texas</h3><p>B.S. Computer Science<br>Expected December 2026</p></article><article><h3>ISC2 Certified in Cybersecurity (CC)</h3><p>In progress · 2026</p></article></div></section>
-    <section class="wrap section"><div class="toolkit"><div><span class="label">Skills</span><h2>Toolkit</h2></div><div><h3>Languages</h3><p>Python, TypeScript, JavaScript, C++, SQL, Bash</p></div><div><h3>Product &amp; data</h3><p>React, FastAPI, Node.js, PostgreSQL, pgvector, Supabase</p></div><div><h3>Cloud &amp; systems</h3><p>GCP, Docker, GitHub Actions, Linux, REST APIs</p></div></div><div class="contact" id="contact"><div><span class="label">Contact</span><h2>Get in touch</h2></div><div><p class="intro">Open to software engineering, AI systems, and data engineering opportunities.</p><div class="contact-links"><a href="mailto:yubrajchaulagain03@gmail.com">yubrajchaulagain03@gmail.com</a><a href="https://linkedin.com/in/yubrajchaulagain03">LinkedIn ↗</a><a href="https://github.com/nceeg01">GitHub ↗</a></div></div></div></section>
-  </main>
-  <footer><div class="wrap">© 2026 Yubraj Chaulagain</div></footer>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">YC</a>
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about" onclick="closeNav()">About</a></li>
+        <li><a href="#experience" onclick="closeNav()">Experience</a></li>
+        <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+        <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+        <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <p class="hero-greeting fade-in">Computer Science @ University of North Texas</p>
+      <h1 class="hero-name fade-in fade-in-delay-1">Yubraj Chaulagain</h1>
+      <p class="hero-tagline fade-in fade-in-delay-2">Shipping production AI systems and full-stack applications for real clients. Currently building enterprise RAG and voice automation at Woodcrest Capital.</p>
+      <div class="hero-links fade-in fade-in-delay-3">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://github.com/nceeg01" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/yubrajchaulagain03" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label fade-in">About</p>
+      <div class="about-content">
+        <div class="about-text fade-in fade-in-delay-1">
+          <p>I'm a Computer Science student at the University of North Texas with hands-on product engineering experience shipping full-stack web applications and AI systems for real clients.</p>
+          <p>Currently building and deploying enterprise software at Woodcrest Capital: a customer-facing RAG application handling document Q&A at scale and an AI-powered voice scheduling agent integrated with live business workflows.</p>
+          <p>Experienced across the full stack — Python, TypeScript, React, Node.js, REST APIs, SQL, and cloud deployment on GCP — with a track record of iterating on shipped systems and measurable outcomes.</p>
+        </div>
+        <div class="about-details fade-in fade-in-delay-2">
+          <div class="about-detail-item">
+            <p class="about-detail-label">Education</p>
+            <p class="about-detail-value">University of North Texas<br>B.S. Computer Science<br>Expected Dec 2026</p>
+          </div>
+          <div class="about-detail-item">
+            <p class="about-detail-label">Focus Areas</p>
+            <p class="about-detail-value">AI & RAG Systems<br>Full-Stack Engineering<br>Cloud & DevOps</p>
+          </div>
+          <div class="about-detail-item">
+            <p class="about-detail-label">Location</p>
+            <p class="about-detail-value">Irving, Texas</p>
+          </div>
+          <div class="about-detail-item">
+            <p class="about-detail-label">Certification</p>
+            <p class="about-detail-value">ISC2 Certified in Cybersecurity (CC)<br>In Progress, 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label fade-in">Experience</p>
+      <h2 class="section-title fade-in fade-in-delay-1">Where I've worked</h2>
+      <div class="experience-list">
+
+        <div class="experience-item fade-in">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-company">Woodcrest Capital</h3>
+              <p class="experience-role">Deployment Engineer (Product Engineering)</p>
+              <p class="experience-location">Fort Worth, TX</p>
+            </div>
+            <span class="experience-date">Jan 2026 — Present</span>
+          </div>
+          <ul class="experience-bullets">
+            <li>Own end-to-end product engineering for CrestMind AI — a full-stack, customer-facing RAG application built on Llama 3.3 70B, FastAPI, React, pgvector, and Supabase — handling property document Q&A at scale for investment analysts.</li>
+            <li>Shipped a contributor-quality estimation layer using vector similarity scoring to automatically assess document chunk relevance, improving retrieval precision and downstream response quality.</li>
+            <li>Built and deployed a production AI voice scheduling agent using n8n, Vapi.ai, and Node.js, integrated with Google Sheets as a live data source to automate customer outreach for a wholesale distribution client.</li>
+            <li>Designed and automated CI/CD deployment pipelines on GCP with Docker, enabling repeatable, high-availability deployments and reducing manual release overhead.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item fade-in fade-in-delay-1">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-company">Kosis Multimedia</h3>
+              <p class="experience-role">Data Engineering Intern</p>
+              <p class="experience-location">Remote</p>
+            </div>
+            <span class="experience-date">2024 — 2025</span>
+          </div>
+          <ul class="experience-bullets">
+            <li>Designed and maintained data pipelines for media content workflows, applying ETL best practices for reliable ingestion, transformation, and quality validation of large volumes of structured data.</li>
+            <li>Built schema normalization and data cleaning modules in Python, improving downstream analytics reliability and enabling consistent query patterns across semi-structured datasets.</li>
+            <li>Collaborated cross-functionally with product and analytics stakeholders — gathering requirements, iterating on pipeline design, and delivering production-ready data tooling on schedule.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label fade-in">Projects</p>
+      <h2 class="section-title fade-in fade-in-delay-1">Selected work</h2>
+      <div class="projects-grid">
+
+        <a href="https://github.com/nceeg01/Crest-Mind-AI" target="_blank" rel="noopener" class="project-card fade-in">
+          <div>
+            <p class="project-index">01</p>
+            <h3 class="project-name">CrestMind AI</h3>
+            <p class="project-desc">Full-stack RAG application for property document Q&A at Woodcrest Capital. React frontend, FastAPI backend, pgvector semantic search, and Llama 3.3 70B inference. Handles thousands of queries across large document corpora with cited answers.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">pgvector</span>
+              <span class="tech-tag">Llama 3.3</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">Vertex AI OCR</span>
+            </div>
+          </div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+
+        <a href="https://github.com/nceeg01/heaven-and-sins-collective" target="_blank" rel="noopener" class="project-card fade-in">
+          <div>
+            <p class="project-index">02</p>
+            <h3 class="project-name">Customer Service Voice Agent</h3>
+            <p class="project-desc">Production automated voice agent for OM Produce (wholesale food distribution). AI-generated outreach calls personalized per customer record from a live Google Sheets data source. Integrated n8n workflow automation with Vapi.ai voice agents.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">n8n</span>
+              <span class="tech-tag">Vapi.ai</span>
+              <span class="tech-tag">Google Sheets API</span>
+              <span class="tech-tag">Express</span>
+            </div>
+          </div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+
+        <a href="https://github.com/nceeg01/AI-City" target="_blank" rel="noopener" class="project-card fade-in">
+          <div>
+            <p class="project-index">03</p>
+            <h3 class="project-name">AI City</h3>
+            <p class="project-desc">Multi-tenant platform for persistent AI companies. Agent hierarchies with 12-tier chain-of-command enforcement, CRC treasury, 4-tier memory system, and Owner Console UI. 176 tests, 0 failures.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Redis</span>
+              <span class="tech-tag">Qdrant</span>
+            </div>
+          </div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+
+        <a href="https://github.com/nceeg01/trackmart" target="_blank" rel="noopener" class="project-card fade-in">
+          <div>
+            <p class="project-index">04</p>
+            <h3 class="project-name">TrackMart</h3>
+            <p class="project-desc">CCTV retail analytics dashboard. ByteTrack-powered customer movement analysis with interactive heatmaps, dwell time tracking, checkout friction scoring, and dead zone detection for store owners.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">Recharts</span>
+            </div>
+          </div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+
+        <a href="https://github.com/nceeg01/f1-jobs" target="_blank" rel="noopener" class="project-card fade-in">
+          <div>
+            <p class="project-index">05</p>
+            <h3 class="project-name">F1-Jobs</h3>
+            <p class="project-desc">Job board for the Formula 1 racing industry. Browse open positions across all F1 teams with search, team and department filters, and team-colored cards.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">React</span>
+            </div>
+          </div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label fade-in">Skills</p>
+      <h2 class="section-title fade-in fade-in-delay-1">Tools & technologies</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group fade-in">
+          <h3 class="skill-group-title">Languages</h3>
+          <div class="skill-items">
+            <span class="skill-item">Python</span>
+            <span class="skill-item">TypeScript</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">C++20</span>
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in fade-in-delay-1">
+          <h3 class="skill-group-title">Web & Full-Stack</h3>
+          <div class="skill-items">
+            <span class="skill-item">React</span>
+            <span class="skill-item">Node.js</span>
+            <span class="skill-item">FastAPI</span>
+            <span class="skill-item">REST APIs</span>
+            <span class="skill-item">WebSockets</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in fade-in-delay-2">
+          <h3 class="skill-group-title">AI / ML & Data</h3>
+          <div class="skill-items">
+            <span class="skill-item">RAG</span>
+            <span class="skill-item">LangChain</span>
+            <span class="skill-item">LangGraph</span>
+            <span class="skill-item">Llama 3.3</span>
+            <span class="skill-item">pgvector</span>
+            <span class="skill-item">Semantic Search</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in fade-in-delay-3">
+          <h3 class="skill-group-title">Databases</h3>
+          <div class="skill-items">
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">MongoDB</span>
+            <span class="skill-item">Supabase</span>
+            <span class="skill-item">pgvector</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in fade-in-delay-4">
+          <h3 class="skill-group-title">Cloud & DevOps</h3>
+          <div class="skill-items">
+            <span class="skill-item">GCP</span>
+            <span class="skill-item">AWS</span>
+            <span class="skill-item">Azure</span>
+            <span class="skill-item">Docker</span>
+            <span class="skill-item">CI/CD</span>
+            <span class="skill-item">Linux</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in">
+          <h3 class="skill-group-title">Systems</h3>
+          <div class="skill-items">
+            <span class="skill-item">Lock-Free Data Structures</span>
+            <span class="skill-item">Multithreading</span>
+            <span class="skill-item">POSIX</span>
+            <span class="skill-item">Low-Latency Design</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <p class="section-label fade-in">Contact</p>
+      <h2 class="contact-heading fade-in fade-in-delay-1">Let's connect</h2>
+      <p class="contact-sub fade-in fade-in-delay-2">Seeking new-grad software engineering roles where product ownership and data-scale thinking matter. Open to full-stack, AI/ML, and cloud infrastructure positions.</p>
+      <div class="contact-links fade-in fade-in-delay-3">
+        <a href="mailto:yubrajchaulagain03@gmail.com" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          Email Me
+        </a>
+        <a href="https://linkedin.com/in/yubrajchaulagain03" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/nceeg01" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">&copy; 2026 Yubraj Chaulagain</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    function closeNav() {
+      document.querySelector('.nav-links').classList.remove('open');
+    }
+  </script>
+
 </body>
 </html>
