@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {Ring} from './dist/model.js';
+test('full, empty, wraparound and FIFO model',()=>{const q=new Ring(3);assert.equal(q.pop(),null);for(let i=0;i<3;i++)assert(q.push(i));assert.equal(q.push(4),false);assert.equal(q.pop(),0);assert(q.push(3));assert.deepEqual([q.pop(),q.pop(),q.pop()],[1,2,3]);assert.equal(q.count,0);assert.equal(q.blocked,1);});
+test('randomized operations agree with reference FIFO',()=>{const q=new Ring(8),ref=[];let seed=7;for(let i=0;i<10000;i++){seed=(seed*16807)%2147483647;if(seed%2){assert.equal(q.push(i),ref.length<8);if(ref.length<8)ref.push(i);}else assert.equal(q.pop(),ref.length?ref.shift():null);assert.equal(q.count,ref.length);}});
