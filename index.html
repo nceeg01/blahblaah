@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikhil Ceeg — Software Engineer</title>
+  <meta name="description" content="Portfolio of Nikhil Ceeg — Software Engineer, AI Systems, Finance. University of North Texas, Computer Science.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0a0a0a; --bg-elevated: #111111; --bg-card: #161616; --bg-card-hover: #1a1a1a;
+      --border: #222222; --border-hover: #333333;
+      --text-primary: #ededed; --text-secondary: #888888; --text-tertiary: #555555;
+      --accent: #a78bfa; --accent-dim: rgba(167, 139, 250, 0.1); --accent-glow: rgba(167, 139, 250, 0.06);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --max-width: 1080px; --radius: 12px; --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 24px; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .nav-logo { font-weight: 600; font-size: 16px; letter-spacing: -0.02em; color: var(--text-primary); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 400; color: var(--text-secondary); transition: color var(--transition); }
+    .nav-links a:hover { color: var(--text-primary); }
+    .nav-mobile-toggle { display: none; background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle svg { width: 20px; height: 20px; }
+    section { padding: 120px 24px; }
+    .container { max-width: var(--max-width); margin: 0 auto; }
+    .section-label { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .section-title { font-size: clamp(28px, 4vw, 36px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 48px; color: var(--text-primary); }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-delay-1 { transition-delay: 0.1s; } .fade-in-delay-2 { transition-delay: 0.2s; } .fade-in-delay-3 { transition-delay: 0.3s; } .fade-in-delay-4 { transition-delay: 0.4s; }
+    .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 60px; position: relative; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%); pointer-events: none; }
+    .hero-content { position: relative; }
+    .hero-greeting { font-size: 16px; font-weight: 400; color: var(--text-secondary); margin-bottom: 16px; }
+    .hero-name { font-size: clamp(48px, 8vw, 80px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 24px; background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-tagline { font-size: clamp(18px, 2.5vw, 22px); font-weight: 300; color: var(--text-secondary); max-width: 560px; line-height: 1.6; margin-bottom: 40px; }
+    .hero-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-size: 14px; font-weight: 500; font-family: var(--font); border-radius: 8px; transition: all var(--transition); cursor: pointer; }
+    .btn-primary { background: var(--text-primary); color: var(--bg); border: 1px solid var(--text-primary); }
+    .btn-primary:hover { background: #ffffff; }
+    .btn-secondary { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
+    .btn-secondary:hover { color: var(--text-primary); border-color: var(--border-hover); background: var(--bg-elevated); }
+    .btn svg { width: 16px; height: 16px; }
+    .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .about-text p { font-size: 16px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 20px; }
+    .about-details { display: flex; flex-direction: column; gap: 24px; }
+    .about-detail-item { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+    .about-detail-label { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 8px; }
+    .about-detail-value { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+    .projects-grid { display: flex; flex-direction: column; gap: 24px; }
+    .project-card { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); transition: all var(--transition); text-decoration: none; }
+    .project-card:hover { background: var(--bg-card-hover); border-color: var(--border-hover); transform: translateY(-2px); }
+    .project-index { font-size: 12px; font-weight: 500; color: var(--text-tertiary); font-variant-numeric: tabular-nums; margin-bottom: 12px; }
+    .project-name { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 12px; }
+    .project-desc { font-size: 15px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px; max-width: 640px; }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tech-tag { font-size: 12px; font-weight: 500; padding: 4px 12px; background: var(--accent-dim); color: var(--accent); border-radius: 100px; }
+    .project-arrow { display: flex; align-items: flex-start; padding-top: 4px; color: var(--text-tertiary); transition: color var(--transition), transform var(--transition); }
+    .project-card:hover .project-arrow { color: var(--text-primary); transform: translate(4px, -4px); }
+    .project-arrow svg { width: 20px; height: 20px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .skill-group { padding: 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+    .skill-group-title { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 16px; }
+    .skill-items { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-item { font-size: 14px; font-weight: 400; color: var(--text-secondary); padding: 6px 14px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; transition: all var(--transition); }
+    .skill-item:hover { color: var(--text-primary); border-color: var(--border-hover); }
+    .contact { text-align: center; padding-bottom: 160px; }
+    .contact-heading { font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.15; margin-bottom: 20px; }
+    .contact-sub { font-size: 16px; color: var(--text-secondary); margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    footer { padding: 24px; border-top: 1px solid var(--border); text-align: center; }
+    .footer-text { font-size: 13px; color: var(--text-tertiary); }
+    @media (max-width: 768px) {
+      section { padding: 80px 20px; }
+      .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; flex-direction: column; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 16px 24px; gap: 16px; }
+      .nav-links.open { display: flex; }
+      .nav-mobile-toggle { display: block; }
+      .about-content { grid-template-columns: 1fr; gap: 32px; }
+      .project-card { grid-template-columns: 1fr; padding: 24px; }
+      .project-arrow { display: none; }
+      .hero-links { flex-direction: column; align-items: flex-start; }
+      .contact { padding-bottom: 100px; }
+    }
+    @media (max-width: 480px) { .skills-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">NC</a>
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about" onclick="closeNav()">About</a></li>
+        <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+        <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+        <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <p class="hero-greeting fade-in">Computer Science @ University of North Texas</p>
+      <h1 class="hero-name fade-in fade-in-delay-1">Nikhil Ceeg</h1>
+      <p class="hero-tagline fade-in fade-in-delay-2">Building at the intersection of software engineering, AI systems, and finance.</p>
+      <div class="hero-links fade-in fade-in-delay-3">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://github.com/nceeg01" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="container">
+      <p class="section-label fade-in">About</p>
+      <div class="about-content">
+        <div class="about-text fade-in fade-in-delay-1">
+          <p>I'm a Computer Science student at the University of North Texas with a focus on building production software at the intersection of AI, systems engineering, and finance.</p>
+          <p>I enjoy designing architecture that scales — from multi-agent platforms with 12-tier hierarchies to RAG pipelines for commercial real estate intelligence. I care about clean code, thoughtful abstractions, and systems that actually work under load.</p>
+          <p>When I'm not writing code, I'm usually reading about distributed systems, market microstructure, or the latest developments in language model infrastructure.</p>
+        </div>
+        <div class="about-details fade-in fade-in-delay-2">
+          <div class="about-detail-item"><p class="about-detail-label">Education</p><p class="about-detail-value">University of North Texas<br>B.S. Computer Science</p></div>
+          <div class="about-detail-item"><p class="about-detail-label">Focus Areas</p><p class="about-detail-value">Software Engineering<br>AI Systems<br>Finance</p></div>
+          <div class="about-detail-item"><p class="about-detail-label">Location</p><p class="about-detail-value">Texas, United States</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <p class="section-label fade-in">Projects</p>
+      <h2 class="section-title fade-in fade-in-delay-1">Selected work</h2>
+      <div class="projects-grid">
+        <a href="https://github.com/nceeg01/AI-City" target="_blank" rel="noopener" class="project-card fade-in">
+          <div><p class="project-index">01</p><h3 class="project-name">AI City</h3><p class="project-desc">Multi-tenant platform for persistent AI companies. Agent hierarchies with 12-tier chain-of-command enforcement, CRC treasury, 4-tier memory system, and Owner Console UI. 176 tests, 0 failures.</p><div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Next.js</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Redis</span><span class="tech-tag">Qdrant</span><span class="tech-tag">Claude API</span></div></div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+        <a href="https://github.com/nceeg01/Crest-Mind-AI" target="_blank" rel="noopener" class="project-card fade-in">
+          <div><p class="project-index">02</p><h3 class="project-name">CrestMind AI</h3><p class="project-desc">RAG document intelligence for commercial real estate. Ask plain-English questions about property leases, HVAC reports, and invoices — get cited answers. Built for Woodcrest Capital as UNT Capstone project.</p><div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Supabase</span><span class="tech-tag">pgvector</span><span class="tech-tag">Llama 3.3</span><span class="tech-tag">React</span></div></div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+        <a href="https://github.com/nceeg01/trackmart" target="_blank" rel="noopener" class="project-card fade-in">
+          <div><p class="project-index">03</p><h3 class="project-name">TrackMart</h3><p class="project-desc">CCTV retail analytics dashboard. ByteTrack-powered customer movement analysis with heatmaps, dwell time tracking, checkout friction detection, and dead zone identification.</p><div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Express</span><span class="tech-tag">SQLite</span><span class="tech-tag">Recharts</span></div></div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+        <a href="https://github.com/nceeg01/f1-jobs" target="_blank" rel="noopener" class="project-card fade-in">
+          <div><p class="project-index">04</p><h3 class="project-name">F1-Jobs</h3><p class="project-desc">Job board for the Formula 1 racing industry. Browse open positions across teams and filter by department, role type, and location.</p><div class="project-tech"><span class="tech-tag">Next.js</span><span class="tech-tag">Firebase</span><span class="tech-tag">Tailwind CSS</span></div></div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+        <a href="https://github.com/nceeg01/heaven-and-sins-collective" target="_blank" rel="noopener" class="project-card fade-in">
+          <div><p class="project-index">05</p><h3 class="project-name">Heaven & Sins Collective</h3><p class="project-desc">Luxury fashion brand with an exclusive waitlist-based landing page. Minimal, premium aesthetic with smooth interactions.</p><div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Vite</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">shadcn/ui</span></div></div>
+          <div class="project-arrow"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="container">
+      <p class="section-label fade-in">Skills</p>
+      <h2 class="section-title fade-in fade-in-delay-1">Tools & technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-group fade-in"><h3 class="skill-group-title">Languages</h3><div class="skill-items"><span class="skill-item">Python</span><span class="skill-item">TypeScript</span><span class="skill-item">JavaScript</span><span class="skill-item">SQL</span></div></div>
+        <div class="skill-group fade-in fade-in-delay-1"><h3 class="skill-group-title">Frameworks</h3><div class="skill-items"><span class="skill-item">FastAPI</span><span class="skill-item">React</span><span class="skill-item">Next.js</span><span class="skill-item">Express</span></div></div>
+        <div class="skill-group fade-in fade-in-delay-2"><h3 class="skill-group-title">AI / ML</h3><div class="skill-items"><span class="skill-item">Claude API</span><span class="skill-item">OpenAI</span><span class="skill-item">LangChain</span><span class="skill-item">RAG</span><span class="skill-item">pgvector</span><span class="skill-item">Qdrant</span></div></div>
+        <div class="skill-group fade-in fade-in-delay-3"><h3 class="skill-group-title">Databases</h3><div class="skill-items"><span class="skill-item">PostgreSQL</span><span class="skill-item">Redis</span><span class="skill-item">Supabase</span><span class="skill-item">Firebase</span><span class="skill-item">SQLite</span></div></div>
+        <div class="skill-group fade-in fade-in-delay-4"><h3 class="skill-group-title">Tools</h3><div class="skill-items"><span class="skill-item">Docker</span><span class="skill-item">Git</span><span class="skill-item">Tailwind CSS</span><span class="skill-item">Vite</span><span class="skill-item">SQLAlchemy</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <p class="section-label fade-in">Contact</p>
+      <h2 class="contact-heading fade-in fade-in-delay-1">Let's connect</h2>
+      <p class="contact-sub fade-in fade-in-delay-2">Open to opportunities in software engineering, AI infrastructure, and fintech. Always happy to talk about interesting problems.</p>
+      <div class="contact-links fade-in fade-in-delay-3">
+        <a href="mailto:nikhil.ceeg03@gmail.com" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>Email Me</a>
+        <a href="https://github.com/nceeg01" target="_blank" rel="noopener" class="btn btn-secondary"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+      </div>
+    </div>
+  </section>
+  <footer><p class="footer-text">&copy; 2026 Nikhil Ceeg</p></footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    function closeNav() { document.querySelector('.nav-links').classList.remove('open'); }
+  </script>
+</body>
+</html>
