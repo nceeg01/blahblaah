@@ -1,0 +1,3 @@
+export class Ring{constructor(capacity=8){if(!Number.isInteger(capacity)||capacity<1||capacity>32)throw Error('Capacity must be 1–32');this.capacity=capacity;this.slots=Array(capacity).fill(null);this.head=0;this.tail=0;this.count=0;this.pushed=0;this.popped=0;this.blocked=0;}
+push(value){if(this.count===this.capacity){this.blocked++;return false;}this.slots[this.head]=value;this.head=(this.head+1)%this.capacity;this.count++;this.pushed++;return true;}
+pop(){if(!this.count)return null;const value=this.slots[this.tail];this.slots[this.tail]=null;this.tail=(this.tail+1)%this.capacity;this.count--;this.popped++;return value;}}
