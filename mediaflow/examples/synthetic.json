@@ -1,0 +1,98 @@
+[
+  {
+    "content_id": "M-001",
+    "headline": "  Inside the city studio  ",
+    "channel": "YouTube ",
+    "date": "2026-08-01",
+    "plays": "12,400",
+    "interactions": "620"
+  },
+  {
+    "content_id": "M-002",
+    "headline": "A morning in Kathmandu",
+    "channel": "INSTAGRAM",
+    "date": "2026-08-02",
+    "plays": "8300",
+    "interactions": "740"
+  },
+  {
+    "content_id": "M-003",
+    "headline": "The making of a short film",
+    "channel": "YouTube",
+    "date": "2026-08-03",
+    "plays": "19600",
+    "interactions": "1100"
+  },
+  {
+    "content_id": "M-004",
+    "headline": "Five frames, one story",
+    "channel": "TikTok",
+    "date": "2026-08-04",
+    "plays": "32100",
+    "interactions": "2800"
+  },
+  {
+    "content_id": "M-005",
+    "headline": "Weekend sound check",
+    "channel": "Instagram",
+    "date": "2026-08-05",
+    "plays": "4600",
+    "interactions": "310"
+  },
+  {
+    "content_id": "M-006",
+    "headline": "Meet the editor",
+    "channel": "YouTube",
+    "date": "2026-08-06",
+    "plays": "7200",
+    "interactions": "280"
+  },
+  {
+    "content_id": "M-003",
+    "headline": "Duplicate delivery",
+    "channel": "youtube",
+    "date": "2026-08-03",
+    "plays": "19600",
+    "interactions": "1100"
+  },
+  {
+    "content_id": "M-007",
+    "headline": "Invalid date example",
+    "channel": "TikTok",
+    "date": "2026-02-30",
+    "plays": "420",
+    "interactions": "20"
+  },
+  {
+    "content_id": "M-008",
+    "headline": "",
+    "channel": "Instagram",
+    "date": "2026-08-08",
+    "plays": "850",
+    "interactions": "32"
+  },
+  {
+    "content_id": "M-009",
+    "headline": "Negative views example",
+    "channel": "YouTube",
+    "date": "2026-08-09",
+    "plays": "-14",
+    "interactions": "3"
+  },
+  {
+    "content_id": "M-010",
+    "headline": "A new series begins",
+    "channel": "TikTok",
+    "date": "2026-08-10",
+    "plays": "0",
+    "interactions": "0"
+  },
+  {
+    "content_id": "M-011",
+    "headline": "Behind the microphone",
+    "channel": "Instagram",
+    "date": "2026-08-11",
+    "plays": "5600",
+    "interactions": "390"
+  }
+]
