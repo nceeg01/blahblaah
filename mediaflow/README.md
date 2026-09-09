@@ -36,4 +36,13 @@ CSV parsing supports quoted fields, embedded commas/newlines and escaped quotes.
 | Cleaning and quality validation | Whitespace/case normalization, numeric/date validation, quarantine |
 | Consistent downstream analytics | Canonical dataset, engagement rates, platform aggregates, exports |
 
-This web MVP uses JavaScript for portable in-browser execution; it does not reproduce the resume's original Python implementation or claim equivalent production scale. Automated tests cover malformed input, calendar and number validation, deduplication, formula-safe CSV export, record limits and normalization idempotence. Browser visual testing has not been performed.
+The web interface uses JavaScript for portable in-browser execution. A separate standard-library Python CLI implements normalization, validation, deduplication, JSON exports and transactional SQLite loading. Neither implementation reproduces the company's original code or claims equivalent production scale. Automated tests cover malformed input, calendar and number validation, deduplication, formula-safe CSV export, record limits, normalization idempotence, SQLite integrity and retention of earlier runs. Browser visual testing has not been performed.
+
+## Python ETL and SQL output
+
+```sh
+python3 -m unittest discover -s tests -p 'test_*.py'
+python3 pipeline.py examples/synthetic.json --database mediaflow.sqlite --output mediaflow-output
+```
+
+The SQLite database stores `runs`, normalized `content`, and `quarantine` records. Each run is appended in a transaction; existing runs are retained. The CLI recognizes the documented aliases automatically. Rename custom columns to canonical names before CLI use; arbitrary manual mapping is available in the browser. Reports are written per run. Browser results and CLI databases are independent. The Python CLI is for local/batch use and is not executed by the static web host. Both implementations use the same schema, but language-specific text coercion and percentage rounding can differ for unusual values; this is not a guaranteed byte-for-byte parity claim.
